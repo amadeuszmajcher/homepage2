@@ -1,6 +1,18 @@
 .hero {
     padding: 74px 16px 84px;
     text-align: center;
+
+    @media (min-width: $tablet) {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    &__bubble {
+        position: absolute;
+        left: calc(50% + 100px);
+        top: -26px;
+    }
+
     &__contact {
         border-radius: 64px;
         color: #fff;
@@ -12,7 +24,8 @@
         line-height: 40px;
         text-decoration: none;
     }
-    &__description{
+
+    &__description {
         text-align: center;
     }
 
@@ -21,6 +34,11 @@
         font-size: 16px;
         line-height: 32px;
         margin-bottom: 48px;
+
+        @media (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 40px;
+        }
     }
 
     &__image {
@@ -29,21 +47,55 @@
         height: 96px;
         border: 16px solid #F6F9FD;
         border-radius: 50%;
+
+        @media (min-width: $desktop) {
+            width: 178px;
+            height: 178px;
+            border: 24px solid #F6F9FD;
+        }
     }
 
     &__image-container {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     &__header {
         font-size: 26px;
         line-height: 32px;
+
+        @media (min-width: $desktop) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 
     &__hello {
         display: none;
+
+        @media (min-width: $desktop) {
+            display: block;
+            background: $blue;
+            color: #fff;
+            padding: 16px 19px;
+            border-radius: 16px;
+            font-weight: bold;
+            font-size: 32px;
+            position: relative;
+
+            &::after {
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 32px;
+                display: block;
+                width: 17.42px;
+                height: 22.66px;
+                background: url('../assets/img/speech.svg');
+            }
+        }
     }
 
     &__link {
