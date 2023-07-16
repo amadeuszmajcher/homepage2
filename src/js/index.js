@@ -25,11 +25,11 @@ fetch('https://api.github.com/users/amadeuszmajcher/repos?sort=created&direction
           </p>
           <p class="project__grid">
             <span class="project__label">demo:</span>
-            <span>&lt;<a class="project__link" href="${homepage}" title="${name} - demo">see_here</a>&gt;</span>
+            <span>&lt;<a class="project__link" rel="noopener noreferrer" target="blank" href="${homepage}" title="${name} - demo">see_here</a>&gt;</span>
           </p>
           <p class="project__grid">
             <span class="project__label">github:</span>
-            <span>&lt;<a class="project__link" href="${html_url}" title="${name} - code">source_code</a>&gt;</span>
+            <span>&lt;<a class="project__link" rel="noopener noreferrer" target="blank" href="${html_url}" title="${name} - code">source_code</a>&gt;</span>
           </p>
         </div>
       </article>`;
