@@ -1,14 +1,16 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
-console.log('HELLO 🚀');
+console.log("HELLO 🚀");
 
-fetch('https://api.github.com/users/amadeuszmajcher/repos?sort=created&direction=asc')
-.then((res) => res.json())
-.then((res) => {
-    const container = document.querySelector('.projects-gird--js');
+fetch(
+  "https://api.github.com/users/amadeuszmajcher/repos?sort=created&direction=asc"
+)
+  .then((res) => res.json())
+  .then((res) => {
+    const container = document.querySelector(".projects-gird--js");
     for (let repo of res) {
-        const {description, homepage, html_url, name} = repo;
-        const template = `<article class="project">
+      const { description, homepage, html_url, name } = repo;
+      const template = `<article class="project">
         <div class="project__window">
           <span class="project__circle"></span>
           <span class="project__circle"></span>
@@ -35,5 +37,5 @@ fetch('https://api.github.com/users/amadeuszmajcher/repos?sort=created&direction
       </article>`;
       container.innerHTML += template;
     }
-})
-.catch((e) => console.log(e));
+  })
+  .catch((e) => console.log(e));
