@@ -3,7 +3,7 @@ import "../scss/main.scss";
 console.log("HELLO 🚀");
 
 fetch(
-  "https://api.github.com/users/amadeuszmajcher/repos?sort=created&direction=asc"
+  "https://api.github.com/users/amadeuszmajcher/repos?sort=created"
 )
   .then((res) => res.json())
   .then((res) => {
